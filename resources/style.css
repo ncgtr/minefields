@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Jersey+10&display=swap');
+
+body {
+    display: grid;
+    background-color: #bdbdbd;
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+text {
+    font-family: "Jersey 10";
+    font-size: 30px;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 700px;
+    height: 700px;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 50px; 
+
+    background-image: url('assets/grid.png');
+    background-size: 100%;
+    image-rendering: pixelated;
+    background-repeat: no-repeat;
+    gap: 0;
+}
+
+#block-container {
+    width: 640px;
+    height: 640px;
+    display: grid;
+    grid-template-columns: repeat(20, 32px); 
+    gap: 0;
+
+    justify-content: center; 
+    align-content: flex-start;
+
+    margin-top: 32px; 
+}
+
+.block {
+    display: block;
+    image-rendering: pixelated;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: none;
+    width: 32px;
+    height: 32px;
+}
+
+.block.hidden {
+    background-image: url('assets/block.png');
+}
+
+.block.hidden:active {
+    background-image: url('assets/block-pressed.png');
+}
+
+.block.shown.zero {
+    background-image: url('assets/empty0.png');
+}
+.block.shown.one {
+    background-image: url('assets/empty1.png');
+}
+.block.shown.two {
+    background-image: url('assets/empty2.png');
+}
+.block.shown.three {
+    background-image: url('assets/empty3.png');
+}
+.block.shown.four {
+    background-image: url('assets/empty4.png');
+}
+.block.shown.five {
+    background-image: url('assets/empty5.png');
+}
+.block.shown.six {
+    background-image: url('assets/empty6.png');
+}
+.block.shown.seven {
+    background-image: url('assets/empty7.png');
+}
+.block.shown.eight {
+    background-image: url('assets/empty8.png');
+}
+.block.hidden.flagged {
+    background-image: url('assets/flag.png');
+}
+.block.shown.mine {
+    background-image: url('assets/mine.png');
+    background-color: #ff4d4d; 
+}
+
+.unselectable {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* IE10 and Edge */
+  user-select: none;         /* Standard */
+}
+
+#title {
+    font-size: 56px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+    margin: 0;
+}
